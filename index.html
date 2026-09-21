@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>한콜더 · HANCALLDER</title>
+<style>
+  :root { color-scheme: dark; --bg:#061526; --card:#0E2238; --line:#1C3A57; }
+  * { box-sizing: border-box; }
+  body { margin:0; background:#061526; color:#E8EEF6;
+         font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Noto Sans KR",sans-serif;
+         line-height:1.6; }
+  .wrap { max-width:520px; margin:0 auto; padding:32px 20px 64px; }
+  h1 { font-size:34px; margin:0 0 4px; letter-spacing:-0.02em; }
+  .en { color:#4AC8F0; letter-spacing:0.25em; font-size:13px; font-weight:700; margin-bottom:24px; }
+  .lead { color:#9FB3C8; margin:0 0 28px; }
+  .btn { display:block; text-align:center; text-decoration:none; font-weight:700;
+         padding:18px 20px; border-radius:16px; font-size:18px; }
+  .primary { background:linear-gradient(90deg,#1E7BFF,#25D0C0); color:#02121F; }
+  .ghost { border:1px solid #23415F; color:#CFE0F0; margin-top:12px; }
+  .card { background:#0E2238; border:1px solid #1C3A57; border-radius:18px;
+          padding:20px; margin-top:28px; }
+  ol { padding-left:20px; margin:0; }
+  ol li { margin-bottom:14px; }
+  .muted { color:#8AA0B6; font-size:14px; }
+  .warn { color:#FFC46B; }
+  h2 { font-size:17px; margin:0 0 12px; }
+  footer { margin-top:40px; color:#5C7A96; font-size:12px; text-align:center; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>한콜더</h1>
+  <div class="en">HANCALLDER</div>
+  <p class="lead">대리·배달 기사를 위한 앱입니다.<br>
+     콜을 자동으로 기록해 가계부를 쓰고, 2인1조 짝에게 목적지를 보냅니다.</p>
+
+  <a class="btn primary" id="dl" href="https://github.com/shingates/hancallder/releases/latest">
+    앱 내려받기
+  </a>
+  <a class="btn ghost" href="daeridonghang://a">앱이 이미 있으면 열기</a>
+
+  <div class="card">
+    <h2>설치하는 법</h2>
+    <ol>
+      <li><b>앱 내려받기</b>를 누르고 받은 파일을 엽니다.</li>
+      <li><span class="warn">“출처를 알 수 없는 앱”</span> 경고가 나오면 허용해 주세요.
+          구글 플레이를 거치지 않아서 나오는 경고입니다.</li>
+      <li>설치 후 앱을 열고 <b>접근성 권한</b>을 켭니다.
+          이 권한이 없으면 콜이 하나도 기록되지 않습니다.</li>
+    </ol>
+  </div>
+
+  <div class="card">
+    <h2>짝(2인1조) 연결</h2>
+    <ol>
+      <li>앞차 기사님이 앱에서 <b>짝 → QR·앱 전달 → 짝 연결</b>을 엽니다.</li>
+      <li>뒷차 기사님이 그 QR을 찍습니다.</li>
+      <li>QR이 안 찍히면 화면에 뜬 <b>연결 코드</b>(예: F-4821)를 불러 주고,
+          <b>짝 → 코드로 연결하기</b>에 넣으면 됩니다.</li>
+    </ol>
+    <p class="muted">찍는 쪽이 자동으로 반대 역할(앞차↔뒷차)이 됩니다.</p>
+  </div>
+
+  <div class="card">
+    <h2>무엇을 읽고 무엇을 보내나</h2>
+    <p class="muted">
+      대리 앱 화면에서 출발지·도착지·금액을 읽어 <b>이 휴대폰 안에만</b> 저장합니다.
+      읽은 콜과 가계부를 외부로 보내는 기능이 없습니다.<br><br>
+      인터넷과 위치는 <b>쉼터 지도</b>를 그릴 때만 씁니다. 위치는 저장하지 않습니다.<br>
+      비밀번호 입력칸의 내용은 저장하지 않습니다.<br>
+      화면을 대신 눌러 주거나 캡처하지 않습니다.
+    </p>
+  </div>
+
+  <footer>© HANCALLDER</footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>한콜더 · HANCALLDER</title>
+<style>
+  body { margin:0; background:#061526; color:#E8EEF6; line-height:1.6;
+         font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Noto Sans KR",sans-serif; }
+  .wrap { max-width:520px; margin:0 auto; padding:56px 20px; text-align:center; }
+  h1 { font-size:30px; margin:0 0 4px; }
+  .en { color:#4AC8F0; letter-spacing:0.25em; font-size:12px; font-weight:700; margin-bottom:28px; }
+  p { color:#9FB3C8; }
+  .btn { display:block; text-decoration:none; font-weight:700; padding:18px 20px;
+         border-radius:16px; font-size:18px; margin-top:14px; }
+  .primary { background:linear-gradient(90deg,#1E7BFF,#25D0C0); color:#02121F; }
+  .ghost { border:1px solid #23415F; color:#CFE0F0; }
+  #late { display:none; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>한콜더</h1>
+  <div class="en">HANCALLDER</div>
+  <p id="msg">앱을 여는 중입니다…</p>
+
+  <div id="late">
+    <p>앱이 열리지 않았나요? 아직 설치 전이면 아래에서 받으세요.</p>
+    <a class="btn primary" href="https://github.com/shingates/hancallder/releases/latest">앱 내려받기</a>
+    <a class="btn ghost" id="retry" href="#">앱 다시 열기</a>
+    <p style="font-size:14px">설치한 뒤 이 화면으로 돌아와 <b>앱 다시 열기</b>를 누르거나,
+       QR을 한 번 더 찍으시면 됩니다.</p>
+  </div>
+</div>
+<script>
+  // 앱이 깔려 있으면 자체 스킴으로 넘어간다.
+  // 안 깔려 있으면 아무 일도 일어나지 않으므로, 잠시 뒤 내려받기 안내를 띄운다.
+  var target = "daeridonghang://a" + window.location.search;
+  document.getElementById("retry").href = target;
+  window.location.href = target;
+  setTimeout(function () {
+    document.getElementById("msg").textContent = "";
+    document.getElementById("late").style.display = "block";
+  }, 1600);
+</script>
+</body>
+</html>
